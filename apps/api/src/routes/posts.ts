@@ -1,22 +1,22 @@
 import { prisma } from "@kaydir/db";
 import Elysia, { t } from "elysia";
 import { middleware } from "../lib/auth";
-import { randomUUID } from "crypto";
-import {
-  S3Client,
-  PutObjectCommand,
-  GetObjectCommand,
-  ListObjectsV2Command,
-} from "@aws-sdk/client-s3";
+// import { randomUUID } from "crypto";
+// import {
+//   S3Client,
+//   PutObjectCommand,
+//   GetObjectCommand,
+//   ListObjectsV2Command,
+// } from "@aws-sdk/client-s3";
 
-const s3 = new S3Client({
-  region: "auto",
-  endpoint: process.env.R2_ENDPOINT!,
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.AWS_ACCESS_ACCESS_KEY!,
-  },
-});
+// const s3 = new S3Client({
+//   region: "auto",
+//   endpoint: process.env.R2_ENDPOINT!,
+//   credentials: {
+//     accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+//     secretAccessKey: process.env.AWS_ACCESS_ACCESS_KEY!,
+//   },
+// });
 
 export const posts = new Elysia({
   prefix: "/posts",

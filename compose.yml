@@ -11,8 +11,8 @@ services:
       - api
   api:
     build:
-      context: ./apps/api
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./apps/api/Dockerfile
     ports:
       - "3001:3001"
     env_file:
