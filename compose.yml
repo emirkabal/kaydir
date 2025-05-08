@@ -1,18 +1,19 @@
 services:
   web:
     build:
-      context: ./apps/web
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile.web
     ports:
       - "3000:3000"
     env_file:
       - ./apps/web/.env
     depends_on:
       - api
+
   api:
     build:
       context: .
-      dockerfile: ./apps/api/Dockerfile
+      dockerfile: Dockerfile.api
     ports:
       - "3001:3001"
     env_file:

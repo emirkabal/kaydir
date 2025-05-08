@@ -1,2 +1,9 @@
-node_modules
-.github
+*
+
+!apps
+!packages
+
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!turbo.json
