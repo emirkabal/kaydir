@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc --noCheck src/index.ts --outDir dist",
+    "build": "tsup",
     "start": "NODE_ENV=production node dist/index.js"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@types/node": "^22.14.0",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "tsup": "^8.4.0"
   }
 }
